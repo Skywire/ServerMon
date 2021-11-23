@@ -10,7 +10,11 @@ An SMTP server
 
 ## Installation
 
-`git clone git@github.com:Skywire/ServerMon.git`
+```
+git clone git@github.com:Skywire/ServerMon.git servermon
+cd servermon
+chmod +x bin/atop.sh
+```
 
 ## Configuration
 
