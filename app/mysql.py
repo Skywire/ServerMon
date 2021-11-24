@@ -10,6 +10,8 @@ def get_processlist(mage_root: str, n98_bin: str):
 
         os.chdir(cd)
 
-        return proc.stdout
+        raw = proc.stdout.decode('utf-8')
+
+        return raw.replace("\t", ',')
     except Exception as e:
         raise e

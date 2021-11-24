@@ -28,8 +28,10 @@ def capture_and_send(mage_root: str, n98_bin, url: str, notify: List[str]):
 
     msg = MIMEText(f"""
             <h1>504</h1>
-            <p>MySQL:  {mysql}</p>
-            <p>ATOP:  {atop}</p>
+            <h2>MySQL</h2>
+            <pre>{mysql}</pre>
+            <h2>ATOP</h2>
+            <pre>{atop}</pre>
             """, 'html')
 
     send_email(msg, notify)

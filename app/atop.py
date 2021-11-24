@@ -11,6 +11,7 @@ def run_atop():
 
     log_file = f"/var/log/atop/atop_{day}"
 
-    proc = subprocess.run(['bin/atop.sh', log_file, start, end], capture_output=True, check=True)
+    proc = subprocess.run(['bin/atop.sh', log_file, start, end], capture_output=True, check=False)
 
-    return proc.stdout
+    with open("var/top.out", "r") as f:
+        return f.read()
