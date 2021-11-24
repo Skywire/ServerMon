@@ -1,3 +1,5 @@
+import os
+import sys
 from email.mime.text import MIMEText
 from typing import List
 
@@ -13,6 +15,7 @@ load_dotenv()
 
 app = typer.Typer()
 
+os.chdir(os.path.dirname(sys.argv[0]))
 
 @app.command()
 def ping(mage_root: str, n98_bin, url: str, notify: List[str]):
